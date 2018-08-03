@@ -1,0 +1,9 @@
+.app__content {
+  display: flex; }
+
+.app__main {
+  width: 70%; }
+
+.app__sidebar {
+  width: 30%;
+  padding-right: 20px; }

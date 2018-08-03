@@ -1,7 +1,9 @@
 @import 'styles/_helpers';
 
 .header {
-    padding-top: 20px;
+    padding: 20px 0;
+    margin-bottom: 30px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
 
     &__title {
         font-size: 28px;

@@ -1,7 +1,0 @@
-.nav {
-  display: flex;
-  padding: 20px 15px; }
-  .nav__link {
-    margin-right: 5px; }
-  .nav:last-child {
-    margin-right: 0; }

@@ -1,5 +1,18 @@
 @import 'styles/_helpers';
 
-.App {
+.app {
     
+
+    &__content {
+        display: flex;        
+    }
+
+    &__main {
+        width: 70%;
+    }
+
+    &__sidebar {
+        width: 30%;
+        padding-right: 20px;
+    }
 }

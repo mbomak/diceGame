@@ -1,0 +1,23 @@
+.balance {
+  padding: 25px 15px;
+  background-color: #F0EAEA;
+  border-radius: 7px;
+  border: 1px solid #c7c7c7; }
+  .balance__head {
+    margin-bottom: 20px;
+    color: #6E6868;
+    font-size: 18px; }
+  .balance__value {
+    color: #30BE60;
+    font-weight: 700; }
+  .balance__btn {
+    padding: 8px 15px;
+    border-radius: 3px;
+    border: 0;
+    background-color: #30BE60;
+    font-size: 16px;
+    color: #000;
+    transition: background 0.3s, box-shadow; }
+    .balance__btn:hover {
+      background-color: #289d50;
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.2); }
