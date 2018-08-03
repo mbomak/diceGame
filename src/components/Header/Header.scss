@@ -1,0 +1,11 @@
+@import 'styles/_helpers';
+
+.header {
+    padding-top: 20px;
+
+    &__title {
+        font-size: 28px;
+        text-align: center;
+        color: $col-2;
+    }
+}

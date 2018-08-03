@@ -1,0 +1,14 @@
+@import 'styles/_helpers';
+
+.nav {
+    display: flex;
+    padding: 20px 15px;
+
+    &__link {
+        margin-right: 5px;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
