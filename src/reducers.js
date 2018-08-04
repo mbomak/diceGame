@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
 
-import headerMenu from 'modules/data';
+import dataReducer from 'modules/data/reducer';
 
 const rootReducer = combineReducers({
-  menu: headerMenu
+  data: dataReducer
 });
 
 export default rootReducer;

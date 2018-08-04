@@ -3,8 +3,12 @@
   margin-bottom: 15px; }
 
 .result__value {
+  display: flex;
+  align-items: baseline;
   font-size: 18px;
   text-transform: uppercase; }
   .result__value span {
+    padding-right: 10px;
+    font-size: 22px;
     font-weight: 700;
     color: #30BE60; }

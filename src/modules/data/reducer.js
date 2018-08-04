@@ -1,32 +1,21 @@
-//import { fromJS } from 'immutable';
 import * as types from './constants';
 
-// const initialState = fromJS({
-//   byId: {},
-//   ids: [],
-//   selected: null,
-//   type: 'default'
-// });
+const initialState = {
+  balance: 0
+};
 
-const initialState = [
-    {
-        id: 1,
-        title: 'menu'
-    }
-];
-
-function menuReducer(state = initialState, { type, payload }) {
+function dataReducer(state = initialState, { type, payload }) {
   switch (type) {
 
-    case types.ADD_MENU:
-      return [
+    case types.ADD_FREE_CREDITS:
+      return {
         ...state,
-        payload
-      ]
+        balance: payload
+      }
 
     default:
       return state;
   }
 }
 
-export default menuReducer;
+export default dataReducer;

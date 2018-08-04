@@ -1,1 +1,1 @@
-export const ADD_MENU = 'ADD_MENU_ITEM';
+export const ADD_FREE_CREDITS = 'ADD_FREE_CREDITS';

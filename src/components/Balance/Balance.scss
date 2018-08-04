@@ -9,7 +9,11 @@
 
     &__value {
         color: $col-5;
-        font-weight: 700;              
+        font-weight: 700;
+
+        &_red {
+            color: $col-7;
+        }              
     }
 
     &__btn {
@@ -19,7 +23,13 @@
         background-color: $col-5;
         font-size: 16px;
         color: #000;
+        user-select: none;
         transition: background 0.3s, box-shadow;
+
+        &_disable {
+            pointer-events: none;
+            opacity: 0.7;
+        }
 
         &:hover {
             background-color: darken($col-5, 8%);

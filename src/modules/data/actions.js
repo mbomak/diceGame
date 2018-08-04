@@ -1,8 +1,8 @@
 import * as types from './constants';
 
-export function addMenu(id, title) {
+export function addFreeCredits() {
   return {
-    type: types.ADD_MENU,
-    payload: { id, title },
+    type: types.ADD_FREE_CREDITS,
+    payload: 100
   };
 }

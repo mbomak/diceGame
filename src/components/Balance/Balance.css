@@ -6,6 +6,8 @@
 .balance__value {
   color: #30BE60;
   font-weight: 700; }
+  .balance__value_red {
+    color: #EF382F; }
 
 .balance__btn {
   padding: 8px 15px;
@@ -14,7 +16,11 @@
   background-color: #30BE60;
   font-size: 16px;
   color: #000;
+  user-select: none;
   transition: background 0.3s, box-shadow; }
+  .balance__btn_disable {
+    pointer-events: none;
+    opacity: 0.7; }
   .balance__btn:hover {
     background-color: #289d50;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.2); }

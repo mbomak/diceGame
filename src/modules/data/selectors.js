@@ -1,19 +1,12 @@
 import { createSelector } from 'reselect';
 
-const selectMenu = state => state;
+const data = state => state;
 
-const selectTitles = createSelector(selectMenu, menu => {
-        let titlesArr = [];
-
-        menu.menu.forEach(item => {
-           titlesArr.push(item.title); 
-        });
-
-        return titlesArr;
-    }
+const takeBalance = createSelector(
+    data,
+    obj => obj.data.balance
 );
 
 export default {
-  selectMenu,
-  selectTitles
+  takeBalance
 };
