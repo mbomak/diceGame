@@ -1,0 +1,18 @@
+@import 'styles/_helpers';
+
+.result {
+    &__title {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    &__value {
+        font-size: 18px;
+        text-transform: uppercase;
+
+        span {
+            font-weight: 700;
+            color: $col-5;
+        }
+    }   
+}

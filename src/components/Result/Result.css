@@ -1,0 +1,10 @@
+.result__title {
+  font-size: 20px;
+  margin-bottom: 15px; }
+
+.result__value {
+  font-size: 18px;
+  text-transform: uppercase; }
+  .result__value span {
+    font-weight: 700;
+    color: #30BE60; }

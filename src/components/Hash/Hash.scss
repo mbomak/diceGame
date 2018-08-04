@@ -1,0 +1,12 @@
+@import 'styles/_helpers';
+
+.hash {
+    &__title {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    &__value {
+        text-align: center;
+    }
+}

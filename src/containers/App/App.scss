@@ -8,11 +8,22 @@
     }
 
     &__main {
-        width: 70%;
+        width: calc(100% - 300px);
     }
 
     &__sidebar {
-        width: 30%;
+        width: 350px;
         padding-right: 20px;
+    }
+
+    &__sidebar-item {
+        padding: 25px 15px;
+        background-color: $col-3;
+        border-radius: 7px;
+        border: 1px solid #c7c7c7;
+
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
     }
 }
