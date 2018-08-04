@@ -1,27 +1,30 @@
-import React, { PureComponent} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 
 import './Result.css';
 
-function Result({className, value}) {
+function Result({className, result, winStatus}) {
     return (
         <div className={cn('result', className)}>
             <div className="result__title">Result</div>
             <div className="result__value">
-                <span>{value}</span> win!
+                <span
+                    className={cn(
+                        {'result__value_win': winStatus},
+                        {'result__value_lose': !winStatus}
+                    )}>
+                    {result}
+                </span>
+                {(winStatus !== 'start' && winStatus) && 'win!'}
+                {(winStatus !== 'start' && !winStatus) && 'lose!'}
             </div>
         </div>
     );
 }
 
-Result.defaultProps = {
-  value: 0,
-};
-
 Result.propTypes = {
-    className: PropTypes.string,
-    value: PropTypes.number
+    className: PropTypes.string
 };
 
 export default Result;

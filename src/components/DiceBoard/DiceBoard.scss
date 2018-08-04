@@ -10,11 +10,12 @@
     background-color: $col-3;
 
     &__field {
+        position: relative;
         display: flex;
         align-items: baseline;
 
         &:not(:last-child) {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
 
         label {
@@ -29,6 +30,23 @@
             padding: 0 15px;
             font-size: 18px;
             text-align: right;
+        }
+    }
+
+    &__field-err {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        width: 250px;
+        top: 33px;
+        left: 120px;
+        color: $col-7;
+        font-size: 13px;
+        transition: opacity 0.3s;
+
+        &_visible {
+            visibility: visible;
+            opacity: 1;
         }
     }
 
@@ -56,6 +74,11 @@
         letter-spacing: 0.5px;
         font-weight: 600;
         color: #9B4C4C;
+
+        &_disable {
+            pointer-events: none;
+            opacity: 0.5;
+        }
     }
 
     &__bet-index {

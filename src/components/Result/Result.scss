@@ -12,11 +12,18 @@
         font-size: 18px;
         text-transform: uppercase;
 
+        &_win {
+            color: $col-5;
+        }
+
+        &_lose {
+            color: $col-7;
+        }
+
         span {
             padding-right: 10px;
             font-size: 22px;
             font-weight: 700;
-            color: $col-5;
         }
     }   
 }

@@ -7,8 +7,11 @@
   align-items: baseline;
   font-size: 18px;
   text-transform: uppercase; }
+  .result__value_win {
+    color: #30BE60; }
+  .result__value_lose {
+    color: #EF382F; }
   .result__value span {
     padding-right: 10px;
     font-size: 22px;
-    font-weight: 700;
-    color: #30BE60; }
+    font-weight: 700; }
