@@ -15,11 +15,11 @@ let randomNumber = Math.floor(Math.random()*101),
 const initialState = {
   balance: localStorageData? localStorageData.balance: 100,
   result: randomNumber,
-  win: localStorageData? localStorageData.winStatus : 'start',
+  win: 'start',
   betAmount: localStorageData? localStorageData.betAmount: 20,
   number: localStorageData? localStorageData.number: 25,
   hash: hash,
-  oldResult: localStorageData? localStorageData.result: 'start'
+  oldResult: 'start'
 };
 
 function dataReducer(state = initialState, { type, payload }) {
@@ -52,7 +52,7 @@ function dataReducer(state = initialState, { type, payload }) {
     case types.CHANGE_OLD_RESULT:
       return {
         ...state,
-        oldResult: state.result
+        oldResult: payload
       }  
 
     case types.CHANGE_STATUS_WIN:

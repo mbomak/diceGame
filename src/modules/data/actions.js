@@ -28,10 +28,10 @@ export function changeResult(value) {
   };
 }
 
-export function changeOldResult() {
+export function changeOldResult(value) {
   return {
     type: types.CHANGE_OLD_RESULT,
-    payload: false
+    payload: value
   };
 }
 

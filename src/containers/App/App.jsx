@@ -30,16 +30,12 @@ class App extends Component {
     onWriteStore = () => {
         const {
             balance,
-            oldResult,
-            winStatus,
             betAmount,
             number
         } = this.props;
 
         const dataObj = JSON.stringify({
             balance,
-            result: oldResult,
-            winStatus,
             betAmount,
             number    
         });
@@ -63,6 +59,7 @@ class App extends Component {
             changeBalance,
             hash,
             oldResult,
+            result,
             addNewHash
         } = this.props;
 
@@ -78,6 +75,7 @@ class App extends Component {
                             betAmount={betAmount}
                             number={number}
                             oldResult={oldResult}
+                            result={result}
                             onChangeBetAmount={changeBetAmount}
                             onChangeNumber={changeNumber}
                             onChangeResult={changeResult}

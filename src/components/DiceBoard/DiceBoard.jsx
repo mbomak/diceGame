@@ -137,8 +137,20 @@ class DiceBoard extends PureComponent {
 
     // handleClick function call result
     handleClick = (index) => {
-        const oldNumber = this.props.oldResult,
-              newNumber = generateNumber(),
+        let {
+            number,
+            balance,
+            betAmount,
+            onChangeOldResult,
+            oldResult,
+            result,
+            onChangeBalance,
+            onChangeStatusWin,
+            onAddNewHash,
+            onChangeResult
+        } = this.props;
+
+        const newNumber = generateNumber(),
               newHash = sha256(newNumber.toString());
         let payout,
             increaseBalance,
@@ -146,12 +158,12 @@ class DiceBoard extends PureComponent {
 
         // calculate payout
         if (index === 'hi') {
-           payout = (100/(100 - this.props.number)).niceNumber();
+           payout = (100/(100 - number)).niceNumber();
         } else if (index === 'lo') {
             payout = (100/this.state.number).niceNumber();   
         }
-        increaseBalance = this.props.balance + this.props.betAmount*payout;
-        reduceBalance = this.props.balance - this.props.betAmount;
+        increaseBalance = balance + betAmount*payout;
+        reduceBalance = balance - betAmount;
         increaseBalance = increaseBalance.toFixed(0);
         reduceBalance = reduceBalance.toFixed(0);
 
@@ -160,30 +172,31 @@ class DiceBoard extends PureComponent {
         if (reduceBalance < 0) {
             reduceBalance = 0;   
         }
+        
 
-        this.props.onChangeOldResult();     
-
+        
         // if bet Hi
-        if (index === 'hi' && (oldNumber >= this.props.number)) {
-            this.props.onChangeBalance(increaseBalance);
-            this.props.onChangeStatusWin(true);
-        } else if (index === 'hi') {
-            this.props.onChangeBalance(reduceBalance);
-            this.props.onChangeStatusWin(false);
+        if (index === 'hi' && (result >= number)) {console.log('win');
+            onChangeBalance(increaseBalance);
+            onChangeStatusWin(true);
+        } else if (index === 'hi') {console.log('loce');
+            onChangeBalance(reduceBalance);
+            onChangeStatusWin(false);
         }
 
         // if bet Lo
-        if (index === 'lo' && (oldNumber <= this.props.number)) {
-            this.props.onChangeBalance(increaseBalance);
-            this.props.onChangeStatusWin(true);
+        if (index === 'lo' && (result <= number)) {
+            onChangeBalance(increaseBalance);
+            onChangeStatusWin(true);
         } else if (index === 'lo') {
-            this.props.onChangeBalance(reduceBalance);
-            this.props.onChangeStatusWin(false);
+            onChangeBalance(reduceBalance);
+            onChangeStatusWin(false);
         }
 
         // add new hash and result
-        this.props.onAddNewHash(newHash);
-        this.props.onChangeResult(newNumber);
+        onChangeOldResult(result); 
+        onAddNewHash(newHash);
+        onChangeResult(newNumber);
     }
 
     // write data in local storage when component was reneder
